@@ -1,0 +1,33 @@
+{
+  "icons": [
+    {
+      "src": "pwaIcons/icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "pwaIcons/icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "pwaIcons/icon_32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "pwaIcons/icon_16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "name": "Ivanov Blog - Персональный блог",
+  "short_name": "Ivanov Blog",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Персональный блог, в котором я пишу интересные для себя вещи",
+  "theme_color": "#007bff",
+  "background_color": "#f4f7f9",
+  "scope": "/"
+}
