@@ -21,7 +21,7 @@ const BlogList: FC<BlogListPropsType> = ({
                 ? (
                     <Col
                         key={`${blog.slug}-list`}
-                        md="9"
+                        md="12"
                     >
                         <CardListItem
                             title={blog.title}

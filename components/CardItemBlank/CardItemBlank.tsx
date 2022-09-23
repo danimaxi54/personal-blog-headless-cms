@@ -17,7 +17,7 @@ const CardItemBlank: FC = () => (
                     key={`${index}-item`}
                     md='4'
                 >
-                    <Card className='fj-card placeholder'>
+                    <Card className='fj-card fj-card-grid placeholder'>
                         <div className='card-body-wrapper'>
                             <Card.Header className='d-flex flex-row'>
                                 <Image

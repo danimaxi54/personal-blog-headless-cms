@@ -13,7 +13,7 @@ const CardListItemBlank = () => (
             .map((_, index) => (
                 <Col
                     key={`${index}-list`}
-                    md="9"
+                    md="12"
                 >
                     <Card className='fj-card fj-card-list placeholder'>
                         <div className='card-body-wrapper'>

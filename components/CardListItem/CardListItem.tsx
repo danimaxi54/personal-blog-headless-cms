@@ -42,11 +42,17 @@ const CardListItem: FC<CardListItemPropsType> = ({
 
             <Card.Body>
                 <Card.Title className='card-main-title'>
-                    {title}
+                    {title.length > 85
+                        ? title.slice(0, 85) + '...'
+                        : title
+                    }
                 </Card.Title>
 
                 <Card.Text>
-                    {subtitle}
+                    {subtitle.length > 150
+                        ? subtitle.slice(0, 150) + '...'
+                        : subtitle
+                    }
                 </Card.Text>
             </Card.Body>
         </div>

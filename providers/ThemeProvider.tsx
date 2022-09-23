@@ -46,11 +46,10 @@ const ThemeProvider = ({ children }: ThemeProviderType): JSX.Element => {
     useEffect(
         () => {
             const root = document.documentElement;
+
             const initialTheme = root.style.getPropertyValue(
                 '--initial-color-mode'
             );
-
-            document.body.classList.add('initialized');
 
             setTheme(
                 initialTheme === 'dark'

@@ -18,7 +18,7 @@ const CardItem: FC<CardItemPropsType> = ({
     author,
     link
 }) => (
-    <Card className='fj-card'>
+    <Card className='fj-card fj-card-grid'>
         <div className={`card-body-wrapper ${!image ? 'no-image' : ''}`}>
             <Card.Header
                 className='d-flex flex-row'
