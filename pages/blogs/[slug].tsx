@@ -89,7 +89,7 @@ const BlogDetail: FC<BlogDetailPropsType> = ({
                                     : ''
                             }
                             author={blog.author}
-                            date={moment(blog.date).format('LLL')}
+                            date={moment(blog.date).format('LL')}
                         />
 
                         <hr />
@@ -118,6 +118,7 @@ export const getStaticProps: GetStaticProps<
             blog,
             preview,
         },
+        revalidate: 10
     };
 };
 

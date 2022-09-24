@@ -19,8 +19,6 @@ import PageLayout from 'components/PageLayout/PageLayout';
 import AuthorIntro from 'components/AuthorIntro/AuthorIntro';
 import FilteringMenu from 'components/FilteringMenu/FilteringMenu';
 import BlogList from 'components/BlogList/BlogList';
-import CardItemBlank from 'components/CardItemBlank/CardItemBlank';
-import CardListItemBlank from 'components/CardListItemBlank/CardListItemBlank';
 import PreviewAlert from 'components/PreviewAlert/PreviewAlert';
 import Preloader from 'components/Preloader/Preloader';
 import ButtonUp from 'components/ButtonUp/ButtonUp';
@@ -100,20 +98,10 @@ const Home: NextPage<HomePropsType> = ({
                 loader={null}
             >
                 <Row className='mb-5'>
-                    {blogs.length
-                        ? (
-                            <BlogList
-                                blogs={blogs.length
-                                    ? blogs
-                                    : initialBlogsData
-                                }
-                                view={filter.view}
-                            />
-                        )
-                        : filter.view.list
-                            ? <CardListItemBlank />
-                            : <CardItemBlank />
-                    }
+                    <BlogList
+                        blogs={blogs.length ? blogs : initialBlogsData}
+                        view={filter.view}
+                    />
                 </Row>
             </InfiniteScroll>
 
@@ -135,7 +123,7 @@ const Home: NextPage<HomePropsType> = ({
                 </div>
             )}
 
-            {isLoadingMore && !hitEnd && <Preloader />}
+            {size > 1 && isLoadingMore && !hitEnd && <Preloader />}
 
             <ButtonUp />
         </PageLayout>
@@ -153,6 +141,7 @@ export const getStaticProps: GetStaticProps<HomePropsType> = async ({ preview= f
             blogs,
             preview
         },
+        revalidate: 10
     };
 };
 
